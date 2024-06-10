@@ -6,11 +6,11 @@ namespace Nono.Tests.Contracts;
 public class Item
 {
     [XmlElement("quantidade", Namespace = "urn:Giftty")]
-    public int Quantidade { get; set; }
+    public int Quantity { get; set; }
 
     [XmlElement("Produto", Namespace = "urn:Giftty")]
-    public long Produto { get; set; }
+    public long Product { get; set; }
 
     [XmlElement("preco", Namespace = "urn:Giftty")]
-    public decimal Preco { get; set; }
+    public decimal Price { get; set; }
 }

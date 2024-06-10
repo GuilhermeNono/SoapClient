@@ -1,6 +1,7 @@
 ﻿using System.Net.Http.Headers;
 using System.Text;
 using System.Xml.Linq;
+using System.Xml.Serialization;
 
 namespace SoapClient
 {
@@ -13,10 +14,12 @@ namespace SoapClient
         /// HTTP client to make requests.
         /// </summary>
         private readonly HttpClient _client;
+
         /// <summary>
         /// <see cref="String"/> with the URL to the web service.
         /// </summary>
         private readonly string _serviceUrl;
+
         /// <summary>
         /// <see cref="String"/> with the web service namespace.
         /// </summary>
@@ -59,9 +62,8 @@ namespace SoapClient
         {
             const string header = "SOAPAction";
             if (_client.DefaultRequestHeaders.Contains(header))
-            {
                 _client.DefaultRequestHeaders.Remove(header);
-            }
+
             _client.DefaultRequestHeaders.Add(header,
                 $"{_serviceNamespace}{(_serviceNamespace.EndsWith("/") ? "" : "/")}{method}");
         }
@@ -158,10 +160,10 @@ namespace SoapClient
         /// Returns an object of type <see cref="T"/> with the deserialized
         /// content from the XML input.
         /// </returns>
-        private T? DeserializeData<T>(string nodeName, string xml, string xmlns)
+        private T? DeserializeData<T>(string xml, string xmlns)
         {
             XElement xelement = XElement.Parse(xml);
-            return xelement.ToObject<T>(nodeName, xmlns);
+            return xelement.ToObject<T>(xmlns);
         }
 
 
@@ -188,11 +190,23 @@ namespace SoapClient
             SetSoapAction(method);
             XNamespace xmlns = _serviceNamespace;
             XNamespace soap = "http://www.w3.org/2003/05/soap-envelope";
+
+            var dataType = typeof(T);
+            string? elementName = null;
+
+            if (dataType is not null)
+            {
+                XmlRootAttribute? xmlRootAttribute =
+                    (XmlRootAttribute)Attribute.GetCustomAttribute(dataType, typeof(XmlRootAttribute))!;
+
+                elementName = xmlRootAttribute.ElementName;
+            }
+
             var xmlRequest = new XDocument(
                 new XDeclaration("1.0", "utf-8", null),
                 new XElement(soap + "Envelope",
                     new XElement(soap + "Body",
-                        new XElement(xmlns + method,
+                        new XElement(xmlns + elementName!,
                             SerializeData(data)
                         )
                     )
@@ -218,7 +232,8 @@ namespace SoapClient
             if (error != null)
             {
                 string message;
-                if (error.Message != null && error.Message.Contains("Server did not recognize the value of HTTP Header SOAPAction"))
+                if (error.Message != null &&
+                    error.Message.Contains("Server did not recognize the value of HTTP Header SOAPAction"))
                 {
                     message = "Invalid SOAP Action or service namespace";
                 }
@@ -226,11 +241,11 @@ namespace SoapClient
                 {
                     message = "Unable to make request to SOAP Action. Possible error in request parameters.";
                 }
+
                 throw new HttpRequestException(message);
             }
 
             T? result = DeserializeData<T>(
-                "Estoque",
                 xmlResult,
                 _serviceNamespace);
 

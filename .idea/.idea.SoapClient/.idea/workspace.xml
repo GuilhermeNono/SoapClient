@@ -8,24 +8,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fa1d8bb-6531-4476-b3d2-2b0e529221d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.SoapClient/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.SoapNetClient/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.SoapNetClient/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.SoapNetClient/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.SoapNetClient/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nono.SoapClient/Client.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nono.SoapClient/Error.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nono.SoapClient/Nono.SoapClient.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nono.SoapClient/ObjectSerializer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nono.Tests/Contracts/Estoque.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nono.Tests/Contracts/EstoqueBody.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nono.Tests/Contracts/EstoqueResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nono.Tests/Contracts/GifttyGetStockTesteRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nono.Tests/Contracts/Item.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nono.Tests/Nono.Tests.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nono.Tests/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoapNetClient.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SoapClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoapClient/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nono.SoapClient/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nono.SoapClient/Client.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nono.SoapClient/ObjectSerializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nono.SoapClient/ObjectSerializer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nono.Tests/Contracts/EstoqueBody.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nono.Tests/Contracts/EstoqueBody.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nono.Tests/Contracts/GifttyGetStockTesteRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nono.Tests/Contracts/GifttyGetStockTesteRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nono.Tests/Contracts/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nono.Tests/Contracts/Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nono.Tests/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nono.Tests/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +29,28 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Nono.SoapClient/Client.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -103,7 +115,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1718042864988</updated>
-      <workItem from="1718042866630" duration="2856000" />
+      <workItem from="1718042866630" duration="8555000" />
     </task>
     <servers />
   </component>
@@ -119,82 +131,108 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Nono.Tests/Program.cs</url>
-          <line>5</line>
-          <properties documentPath="C:\Builds\SoapClient\Nono.Tests\Program.cs" containingFunctionPresentation="">
-            <startOffsets>
-              <option value="115" />
-            </startOffsets>
-            <endOffsets>
-              <option value="292" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Nono.SoapClient/Client.cs</url>
-          <line>231</line>
-          <properties documentPath="C:\Builds\SoapClient\Nono.SoapClient\Client.cs" containingFunctionPresentation="Method 'PostAsync'">
-            <startOffsets>
-              <option value="8620" />
-            </startOffsets>
-            <endOffsets>
-              <option value="8741" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Nono.SoapClient/Client.cs</url>
-          <line>163</line>
-          <properties documentPath="C:\Builds\SoapClient\Nono.SoapClient\Client.cs" containingFunctionPresentation="Method 'DeserializeData'">
-            <startOffsets>
-              <option value="6114" />
-            </startOffsets>
-            <endOffsets>
-              <option value="6159" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Nono.SoapClient/ObjectSerializer.cs</url>
-          <line>253</line>
+          <line>268</line>
           <properties documentPath="C:\Builds\SoapClient\Nono.SoapClient\ObjectSerializer.cs" containingFunctionPresentation="Method 'ToObject'">
             <startOffsets>
-              <option value="8849" />
+              <option value="9456" />
             </startOffsets>
             <endOffsets>
-              <option value="9071" />
+              <option value="9678" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Nono.SoapClient/ObjectSerializer.cs</url>
-          <line>276</line>
-          <properties documentPath="C:\Builds\SoapClient\Nono.SoapClient\ObjectSerializer.cs" containingFunctionPresentation="Method 'ToObject'">
+          <url>file://$PROJECT_DIR$/Nono.SoapClient/Client.cs</url>
+          <line>247</line>
+          <properties documentPath="C:\Builds\SoapClient\Nono.SoapClient\Client.cs" containingFunctionPresentation="Method 'PostAsync'">
             <startOffsets>
-              <option value="9572" />
+              <option value="8993" />
             </startOffsets>
             <endOffsets>
-              <option value="9586" />
+              <option value="9087" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="8" />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Nono.SoapClient/Client.cs</url>
+          <line>189</line>
+          <properties documentPath="C:\Builds\SoapClient\Nono.SoapClient\Client.cs" containingFunctionPresentation="Method 'PostAsync'">
+            <startOffsets>
+              <option value="6986" />
+            </startOffsets>
+            <endOffsets>
+              <option value="7008" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Nono.SoapClient/Client.cs</url>
+          <line>164</line>
+          <properties documentPath="C:\Builds\SoapClient\Nono.SoapClient\Client.cs" containingFunctionPresentation="Method 'DeserializeData'">
+            <startOffsets>
+              <option value="6051" />
+            </startOffsets>
+            <endOffsets>
+              <option value="6091" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Nono.SoapClient/Client.cs</url>
+          <line>86</line>
+          <properties documentPath="C:\Builds\SoapClient\Nono.SoapClient\Client.cs" containingFunctionPresentation="Method 'SerializeData'">
+            <startOffsets>
+              <option value="2982" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3029" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Nono.SoapClient/ObjectSerializer.cs</url>
-          <line>273</line>
-          <properties documentPath="C:\Builds\SoapClient\Nono.SoapClient\ObjectSerializer.cs" containingFunctionPresentation="Method 'ToObject'">
+          <line>154</line>
+          <properties documentPath="C:\Builds\SoapClient\Nono.SoapClient\ObjectSerializer.cs" containingFunctionPresentation="Method 'ToXml'">
             <startOffsets>
-              <option value="9488" />
+              <option value="5521" />
             </startOffsets>
             <endOffsets>
-              <option value="9544" />
+              <option value="5539" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="9" />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Nono.SoapClient/ObjectSerializer.cs</url>
+          <line>251</line>
+          <properties documentPath="C:\Builds\SoapClient\Nono.SoapClient\ObjectSerializer.cs" containingFunctionPresentation="Method 'ToObject'">
+            <startOffsets>
+              <option value="8934" />
+            </startOffsets>
+            <endOffsets>
+              <option value="8961" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Nono.SoapClient/ObjectSerializer.cs</url>
+          <line>171</line>
+          <properties documentPath="C:\Builds\SoapClient\Nono.SoapClient\ObjectSerializer.cs" containingFunctionPresentation="Method 'ToXml'">
+            <startOffsets>
+              <option value="6028" />
+            </startOffsets>
+            <endOffsets>
+              <option value="7105" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

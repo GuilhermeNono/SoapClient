@@ -4,12 +4,12 @@ using SoapClient;
 Client client = new("http://localhost:8080/giftty", "urn:Giftty");
 
 var teste = await client.PostAsync<Estoque>(
-    "Consulta",
+    "http://localhost:8080/giftty#ConsultarEstoque",
     new GifttyGetStockTesteRequest()
     {
-        chave = "5",
-        Produto = 2,
-        Projeto = "ad"
+        Key = "5",
+        Product = 2,
+        Project = "ad"
     }
 );
 

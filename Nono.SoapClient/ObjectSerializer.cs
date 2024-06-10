@@ -13,7 +13,8 @@ namespace SoapClient
         /// <summary>
         /// Data types to be handled as simple types.
         /// </summary>
-        private static readonly Type[] WriteTypes = {
+        private static readonly Type[] WriteTypes =
+        {
             typeof(string), typeof(DateTime), typeof(Enum), typeof(decimal),
             typeof(Guid)
         };
@@ -152,9 +153,7 @@ namespace SoapClient
             XNamespace? xmlNamespace = null)
         {
             if (input == null)
-            {
                 return null;
-            }
 
             if (string.IsNullOrEmpty(element))
             {
@@ -171,29 +170,35 @@ namespace SoapClient
             var props = type.GetProperties();
 
             var elements = props.Select(p =>
-            {
-                var pType =
-                    Nullable.GetUnderlyingType(p.PropertyType) ??
-                    p.PropertyType;
-                var name = XmlConvert.EncodeName(p.Name);
-                var val =
-                    pType.IsArray ? "array" : p.GetValue(input, null);
-                var value = pType.IsArray
-                    ? GetArrayElement(p,
-                        (Array)p.GetValue(input, null)!,
-                        xmlNamespace)
-                    : pType.IsSimpleType() || pType.IsEnum
-                        ? CreateElement(xmlNamespace, name, val)
-                        : val.ToXml(name, xmlNamespace);
-                return value;
-            })
+                {
+                    var pType =
+                        Nullable.GetUnderlyingType(p.PropertyType) ??
+                        p.PropertyType;
+
+                    XmlElementAttribute xmlElementAttribute =
+                        (XmlElementAttribute)Attribute.GetCustomAttribute(p, typeof(XmlElementAttribute));
+
+                    var name = xmlElementAttribute is null ? XmlConvert.EncodeName(p.Name) : xmlElementAttribute.ElementName;
+
+                    var val =
+                        pType.IsArray ? "array" : p.GetValue(input, null);
+
+                    var value = pType.IsArray
+                        ? GetArrayElement(p,
+                            (Array)p.GetValue(input, null)!,
+                            xmlNamespace)
+                        : pType.IsSimpleType() || pType.IsEnum
+                            ? CreateElement(xmlNamespace, name, val)
+                            : val.ToXml(name, xmlNamespace);
+
+                    return value;
+                })
                 .Where(v => v != null);
 
             ret.Add(elements);
 
             return ret;
         }
-
 
 
         /// <summary>
@@ -237,12 +242,22 @@ namespace SoapClient
         /// </returns>
         public static T? ToObject<T>(
             this XElement? input,
-            string elementName = null,
             string xmlNamespace = null)
         {
             T? result;
 
             XElement? xml;
+
+            var dataType = typeof(T);
+            string? elementName = null;
+
+            if (dataType is not null)
+            {
+                XmlRootAttribute? xmlRootAttribute =
+                    (XmlRootAttribute)Attribute.GetCustomAttribute(dataType, typeof(XmlRootAttribute))!;
+
+                elementName = xmlRootAttribute.ElementName;
+            }
 
             if (string.IsNullOrEmpty(elementName))
             {
@@ -275,6 +290,19 @@ namespace SoapClient
             }
 
             return result;
+        }
+
+        public static string? GetElementNameOrDefault<T>(T? type)
+        {
+            var dataType = typeof(T);
+            string? elementName = null;
+
+            if (type is null) return null;
+
+            XmlRootAttribute? xmlRootAttribute =
+                (XmlRootAttribute)Attribute.GetCustomAttribute(dataType, typeof(XmlRootAttribute))!;
+
+            return xmlRootAttribute.ElementName;
         }
     }
 }

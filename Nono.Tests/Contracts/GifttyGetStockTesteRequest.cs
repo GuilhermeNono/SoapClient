@@ -5,10 +5,10 @@ namespace Nono.Tests.Contracts;
 [XmlRoot(ElementName = "Consulta", Namespace = "urn:Giftty")]
 public class GifttyGetStockTesteRequest
 {
-    [XmlElement(Namespace = "urn:Giftty")]
-    public string chave { get; set; }
-    [XmlElement(Namespace = "urn:Giftty")]
-    public int? Produto { get; set; }
-    [XmlElement(Namespace = "urn:Giftty")]
-    public string? Projeto { get; set; }
+    [XmlElement(ElementName = "chave", Namespace = "urn:Giftty")]
+    public string Key { get; set; }
+    [XmlElement(ElementName = "Produto", Namespace = "urn:Giftty")]
+    public int? Product { get; set; }
+    [XmlElement(ElementName = "Projeto", Namespace = "urn:Giftty")]
+    public string? Project { get; set; }
 }

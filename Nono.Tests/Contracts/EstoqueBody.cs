@@ -6,5 +6,5 @@ namespace Nono.Tests.Contracts;
 public class EstoqueBody
 {
     [XmlElement("Estoque", Namespace = "urn:Giftty")]
-    public Estoque Estoque { get; set; }
+    public Estoque Stock { get; set; }
 }

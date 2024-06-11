@@ -197,9 +197,11 @@ namespace SoapClient
             if (dataType is not null)
             {
                 XmlRootAttribute? xmlRootAttribute =
-                    (XmlRootAttribute)Attribute.GetCustomAttribute(dataType, typeof(XmlRootAttribute))!;
+                    (XmlRootAttribute?)Attribute.GetCustomAttribute(dataType, typeof(XmlRootAttribute));
 
-                elementName = xmlRootAttribute.ElementName;
+                elementName = !string.IsNullOrEmpty(xmlRootAttribute?.ElementName)
+                    ? xmlRootAttribute.ElementName
+                    : dataType.Name;
             }
 
             var xmlRequest = new XDocument(

@@ -87,9 +87,9 @@ namespace SoapClient
         private static XElement? CreateElement(
             XNamespace? xmlNamespace,
             string elementName,
-            object content = null)
+            object? content = null)
         {
-            return new XElement(xmlNamespace + elementName,
+            return new XElement(xmlNamespace is null ? elementName : xmlNamespace + elementName,
                 content is DateTime ? $"{content:o}" : content);
         }
 
@@ -157,7 +157,18 @@ namespace SoapClient
 
             if (string.IsNullOrEmpty(element))
             {
-                string name = input.GetType().Name;
+                var inputType = input.GetType();
+
+                string name = string.Empty;
+
+                XmlRootAttribute? xmlRootAttribute =
+                    (XmlRootAttribute?)Attribute.GetCustomAttribute(inputType, typeof(XmlRootAttribute));
+
+                name = !string.IsNullOrEmpty(xmlRootAttribute?.ElementName)
+                    ? xmlRootAttribute.ElementName
+                    : inputType.Name;
+
+
                 element = name.Contains("AnonymousType")
                     ? "Object"
                     : name;
@@ -175,10 +186,12 @@ namespace SoapClient
                         Nullable.GetUnderlyingType(p.PropertyType) ??
                         p.PropertyType;
 
-                    XmlElementAttribute xmlElementAttribute =
-                        (XmlElementAttribute)Attribute.GetCustomAttribute(p, typeof(XmlElementAttribute));
+                    XmlElementAttribute? xmlElementAttribute =
+                        (XmlElementAttribute?)Attribute.GetCustomAttribute(p, typeof(XmlElementAttribute));
 
-                    var name = xmlElementAttribute is null ? XmlConvert.EncodeName(p.Name) : xmlElementAttribute.ElementName;
+                    var name = !string.IsNullOrEmpty(xmlElementAttribute?.ElementName)
+                        ? xmlElementAttribute.ElementName
+                        : XmlConvert.EncodeName(p.Name);
 
                     var val =
                         pType.IsArray ? "array" : p.GetValue(input, null);
@@ -251,13 +264,10 @@ namespace SoapClient
             var dataType = typeof(T);
             string? elementName = null;
 
-            if (dataType is not null)
-            {
-                XmlRootAttribute? xmlRootAttribute =
-                    (XmlRootAttribute)Attribute.GetCustomAttribute(dataType, typeof(XmlRootAttribute))!;
+            XmlRootAttribute? xmlRootAttribute =
+                (XmlRootAttribute?)Attribute.GetCustomAttribute(dataType, typeof(XmlRootAttribute));
 
-                elementName = xmlRootAttribute.ElementName;
-            }
+            elementName = !string.IsNullOrEmpty(xmlRootAttribute?.ElementName) ? xmlRootAttribute.ElementName : null;
 
             if (string.IsNullOrEmpty(elementName))
             {
@@ -267,7 +277,7 @@ namespace SoapClient
             else
             {
                 xml = input
-                    .Descendants(string.IsNullOrEmpty(xmlNamespace)
+                    .DescendantsAndSelf(string.IsNullOrEmpty(xmlNamespace)
                         ? elementName
                         : (XNamespace)xmlNamespace + elementName)
                     .FirstOrDefault();
@@ -290,19 +300,6 @@ namespace SoapClient
             }
 
             return result;
-        }
-
-        public static string? GetElementNameOrDefault<T>(T? type)
-        {
-            var dataType = typeof(T);
-            string? elementName = null;
-
-            if (type is null) return null;
-
-            XmlRootAttribute? xmlRootAttribute =
-                (XmlRootAttribute)Attribute.GetCustomAttribute(dataType, typeof(XmlRootAttribute))!;
-
-            return xmlRootAttribute.ElementName;
         }
     }
 }

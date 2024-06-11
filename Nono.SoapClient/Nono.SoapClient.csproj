@@ -16,6 +16,8 @@
         <PackageReleaseNotes>Version 1.0.0</PackageReleaseNotes>
         <PackageIcon>bar-soap-uses.jpg</PackageIcon>
         <Version>1.0.1</Version>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Copyright>Copyright © GuilhermeNono 2024</Copyright>
     </PropertyGroup>
 
     <ItemGroup>

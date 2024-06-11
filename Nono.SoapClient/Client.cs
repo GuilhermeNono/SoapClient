@@ -191,7 +191,7 @@ namespace SoapClient
             XNamespace xmlns = _serviceNamespace;
             XNamespace soap = "http://www.w3.org/2003/05/soap-envelope";
 
-            var dataType = typeof(T);
+            var dataType = data?.GetType();
             string? elementName = null;
 
             if (dataType is not null)

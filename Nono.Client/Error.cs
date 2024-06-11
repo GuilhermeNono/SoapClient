@@ -1,4 +1,4 @@
-namespace SoapClient
+namespace Nono.Client
 {
     /// <summary>
     /// Request error model

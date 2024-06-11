@@ -1,0 +1,24 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1506f7e4_002D4c16_002D4c99_002Dbbf1_002D300648169529/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Convert_Serialized_Xml_To_Deserialized_Object_No_Namespace #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::378110FA-F726-4F03-9614-2157A39194B7::net8.0::Nono.Tests.Client&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6533c208_002Da878_002D4f7a_002Da15b_002D5b4b25570784/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Do_Request_With_Request_And_Response" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::378110FA-F726-4F03-9614-2157A39194B7::net8.0::Nono.Tests.Client.Do_Request_With_Request_And_Response&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::378110FA-F726-4F03-9614-2157A39194B7::net8.0::Nono.Tests.Client.Convert_Object_To_Serialized_Xml_No_Namespace&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::378110FA-F726-4F03-9614-2157A39194B7::net8.0::Nono.Tests.Client.Convert_Object_To_Serialized_Xml_With_Namespace&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::378110FA-F726-4F03-9614-2157A39194B7::net8.0::Nono.Tests.Client.Convert_Serialized_Xml_To_Deserialized_Object_No_Namespace&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9a4e898d_002D2112_002D4f1f_002Dafa4_002D70262be77d35/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Convert_Serialized_Xml_To_Deserialized_Object_No_Namespace #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::378110FA-F726-4F03-9614-2157A39194B7::net8.0::Nono.Tests.Client.Convert_Serialized_Xml_To_Deserialized_Object_No_Namespace&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a7fc54b4_002D9f35_002D4c73_002D8767_002D55b68376a2c3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Convert_Serialized_Xml_To_Deserialized_Object_No_Namespace" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::378110FA-F726-4F03-9614-2157A39194B7::net8.0::Nono.Tests.Client.Convert_Serialized_Xml_To_Deserialized_Object_No_Namespace&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

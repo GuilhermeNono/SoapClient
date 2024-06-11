@@ -3,7 +3,7 @@ using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Serialization;
 
-namespace SoapClient
+namespace Nono.Client
 {
     /// <summary>
     /// Serialize/Deserialize extension methods.
@@ -255,7 +255,7 @@ namespace SoapClient
         /// </returns>
         public static T? ToObject<T>(
             this XElement? input,
-            string xmlNamespace = null)
+            string? xmlNamespace = null)
         {
             T? result;
 
@@ -272,11 +272,11 @@ namespace SoapClient
             if (string.IsNullOrEmpty(elementName))
             {
                 xml = input;
-                elementName = input.Name.LocalName;
+                elementName = input?.Name.LocalName;
             }
             else
             {
-                xml = input
+                xml = input?
                     .DescendantsAndSelf(string.IsNullOrEmpty(xmlNamespace)
                         ? elementName
                         : (XNamespace)xmlNamespace + elementName)

@@ -3,7 +3,7 @@
 namespace Nono.Tests.Contracts;
 
 [XmlRoot(ElementName = "Consulta", Namespace = "urn:Giftty")]
-public class GifttyGetStockTesteRequest
+public class GifttyGetStockRequest
 {
     [XmlElement(ElementName = "chave", Namespace = "urn:Giftty")]
     public string Key { get; set; }

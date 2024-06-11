@@ -4,20 +4,19 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <RootNamespace>SoapClient</RootNamespace>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Version>1.0.3</Version>
         <Title>SoapClient</Title>
         <Authors>Guilherme Nono</Authors>
         <Description>A Client for Soap protocol.</Description>
+        <Copyright>Copyright © GuilhermeNono 2024</Copyright>
         <PackageProjectUrl>https://github.com/GuilhermeNono/SoapClient</PackageProjectUrl>
-        <PackageLicenseUrl>https://github.com/GuilhermeNono/SoapClient/blob/master/LICENSE</PackageLicenseUrl>
+        <PackageLicense>https://github.com/GuilhermeNono/SoapClient/blob/master/LICENSE</PackageLicense>
+        <PackageIcon>bar-soap-uses.jpg</PackageIcon>
         <RepositoryUrl>https://github.com/GuilhermeNono/SoapClient</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
-        <PackageTags>soapclient</PackageTags>
-        <PackageReleaseNotes>Version 1.0.2</PackageReleaseNotes>
-        <PackageIcon>bar-soap-uses.jpg</PackageIcon>
-        <Version>1.0.2</Version>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Copyright>Copyright © GuilhermeNono 2024</Copyright>
+        <PackageTags>soap soapclient</PackageTags>
+        <PackageReleaseNotes>Version 1.0.3</PackageReleaseNotes>
     </PropertyGroup>
 
     <ItemGroup>

@@ -3,12 +3,12 @@ using System.Text;
 using System.Xml.Linq;
 using System.Xml.Serialization;
 
-namespace SoapClient
+namespace Nono.Client
 {
     /// <summary>
     /// Client to make SOAP requests.
     /// </summary>
-    public class Client : IDisposable
+    public class SoapClient : IDisposable
     {
         /// <summary>
         /// HTTP client to make requests.
@@ -39,7 +39,7 @@ namespace SoapClient
         /// the HTTP client with the parameters required for calling
         /// the service methods.
         /// </remarks>
-        public Client(string serviceUrl, string serviceNamespace)
+        public SoapClient(string serviceUrl, string serviceNamespace)
         {
             _client = new HttpClient();
             _client.DefaultRequestHeaders.Accept.Add(

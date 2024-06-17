@@ -1,5 +1,6 @@
 ﻿using System.Net.Http.Headers;
 using System.Text;
+using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Serialization;
 
@@ -187,6 +188,30 @@ namespace Nono.Client
         /// </returns>
         public async Task<T?> PostAsync<T>(string method, object? data = null)
         {
+            var postAsyncExec = await PostAsyncExec(method, data);
+
+            T? result = DeserializeData<T>(
+                postAsyncExec,
+                _serviceNamespace);
+
+            return result;
+        }
+
+        public async Task<XmlDocument?> PostAsyncAsXml(string method, object? data = null)
+        {
+            var postAsyncExec = await PostAsyncExec(method, data);
+
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.LoadXml(postAsyncExec!);
+
+            return xmlDoc;
+        }
+
+        public async Task<string?> PostAsyncAsString(string method, object? data = null) =>
+            await PostAsyncExec(method, data);
+
+        private async Task<string?> PostAsyncExec(string method, object? data = null)
+        {
             SetSoapAction(method);
             XNamespace xmlns = _serviceNamespace;
             XNamespace soap = "http://www.w3.org/2003/05/soap-envelope";
@@ -247,11 +272,7 @@ namespace Nono.Client
                 throw new HttpRequestException(message);
             }
 
-            T? result = DeserializeData<T>(
-                xmlResult,
-                _serviceNamespace);
-
-            return result;
+            return xmlResult;
         }
 
         /// <summary>
